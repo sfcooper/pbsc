@@ -50,6 +50,8 @@ group :test do
   gem 'rspec-rails', '~> 3.5'
   gem 'factory_girl_rails'
   gem 'database_cleaner'
+  gem 'coveralls', require: false
+
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
