@@ -51,6 +51,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'database_cleaner'
   gem 'coveralls', require: false
+  gem 'shoulda-matchers'
 
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
