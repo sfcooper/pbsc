@@ -1,6 +1,10 @@
 language: ruby
+rvm: 
+- 2.7.0
 cache:
 - bundler
+services:
+  - postgresql
 before_script:
 - bundle exec rake db:create
 - bundle exec rake db:migrate
@@ -12,3 +16,5 @@ deploy:
   app: photosbysc
   on:
     repo: sfcooper/pbsc
+  run:
+    - "rails db:migrate"
