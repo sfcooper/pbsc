@@ -1,0 +1,14 @@
+language: ruby
+cache:
+- bundler
+before_script:
+- bundle exec rake db:create
+- bundle exec rake db:migrate
+- bundle exec rake assets:precompile
+deploy:
+  provider: heroku
+  api_key:
+    secure: bDGAaoSJSqql/F+pi4calo46BtJXcY/izNI0WjPs344w7aYqU7JdNwjE6WEaijmMFm2MMPE4mbOc1lvjL8+PZm8/LFoUkyIj9YWXcRe+BzyZI+Rbh6hLB/mwzWTEkr/1B05/D6UmrbzPfedtVXQGu6+pmKLKoHMeGIuzyvGEvcGcM6n7g3VNv11N55V+3TgzVJQLVv4EsYzrBp+27IgGatqvfgzmuWF7JDC39Gf58v+dBhPchEWeBEzwdkoVWflMUUpZJOQ4vQM4GU7LSrnqiv6tSbBwzcKzv4c8M67LHXb2dhxmRo/I3xPJG1AeIlPu4JKr8BqzN/WClE44RoDsbVzRaanq8q7NQWiKDlZj2uHDQNYWDdwSL31tARxrG28WU0kB0OvHNZyDJcU2BzeZMpz5C5hNyUeRgOlXQAIJI3VxNDBjIMOYs8oK7Y2CccuYn6TLevxf8OaGHSorF5IsNMditcHYC0B0YfH0A9Gw/A50XmMjoCY2HJbJq+IQ/f76agwkL4tz/yrg1KB18o36/VD4lsnpdjJgsWsVoa5oPIAZKALifD0gctP3l4mGS4TB2cWk2t6wNOreTeiM/vHvouGCMlQqUTdExmnaPLOjN3L1/TbZ6SA9JQV371yN8+cu1TRImDZ7ZAlT/SVUH80WCXKSK4PgTh6nhZKuQtzBEmU=
+  app: photosbysc
+  on:
+    repo: sfcooper/pbsc
