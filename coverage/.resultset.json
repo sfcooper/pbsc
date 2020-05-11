@@ -9,6 +9,9 @@
         2,
         2,
         null,
+        1,
+        2,
+        null,
         null,
         null
       ],
@@ -317,7 +320,6 @@
         1,
         1,
         1,
-        1,
         null,
         null,
         null
@@ -330,8 +332,21 @@
       "/Users/Simon/Sites/pbsc/app/controllers/application_controller.rb": [
         1,
         null
+      ],
+      "/Users/Simon/Sites/pbsc/app/models/post_tag.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/Simon/Sites/pbsc/app/models/tag.rb": [
+        1,
+        null,
+        1,
+        1,
+        null
       ]
     },
-    "timestamp": 1588979139
+    "timestamp": 1589024558
   }
 }

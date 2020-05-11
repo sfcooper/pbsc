@@ -2,14 +2,23 @@
 
 
 
-<p>
-  <strong>Title:</strong>
+<h1>
   <%= @post.title %>
+</h1>
+
+<p>
+  <%= @post.body %>
 </p>
 
 <p>
-  <strong>Body:</strong>
-  <%= @post.body %>
+  <strong>Uploads:</strong> <br/>
+  <% if @post.photos.attached? %>
+    <% @post.photos.each do |photo| %>
+      <%= image_tag(photo, width: 400) %> <br/>
+    <% end %>
+  <% else %>
+    <p>no photos</p>
+  <% end %>
 </p>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
